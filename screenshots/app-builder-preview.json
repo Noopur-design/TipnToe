@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Luxe Nails | Premium Nail Extensions & Nail Art",
+      "hasCanvas": false,
+      "bodyTextLen": 2289,
+      "bodyTextHash": "2f7961f329a090bb11d58d42ae9a1df3ff101092bfc658f8c044994bc3721c5f",
+      "bodyTextPrefix": "Skip to content LUXE Nails Home Services Gallery About Contact B",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Luxe Nails | Premium Nail Extensions & Nail Art",
+      "hasCanvas": false,
+      "bodyTextLen": 2148,
+      "bodyTextHash": "3b1bdf21b039a70eaad1da125e2ffefd5fc93232268e6b4f136bcdb191c42235",
+      "bodyTextPrefix": "Skip to content LUXE Nails Book MORE THAN A MANICURE Nail Extens",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

@@ -1,0 +1,1701 @@
+MASTER PROMPT FOR GROK BUILD
+
+Build a complete, production-ready, fully responsive luxury nail salon website called:
+
+LUXE NAILS
+
+IMPORTANT:
+I have attached 6 reference screenshots showing the exact UI/design system I want.
+
+Treat the attached screenshots as the PRIMARY VISUAL SOURCE OF TRUTH.
+
+Recreate the interface as closely as technically possible:
+- same overall composition
+- same visual hierarchy
+- same typography hierarchy
+- same colors
+- same organic/wavy section shapes
+- same image treatment
+- same card proportions
+- same spacing
+- same rounded corners
+- same navigation structure
+- same buttons
+- same icon placement
+- same section rhythm
+- same luxury aesthetic
+- same desktop composition
+- same mobile behavior adapted intelligently
+- same overall premium editorial feeling
+
+DO NOT create a generic nail salon website.
+DO NOT simplify the design.
+DO NOT replace the organic shapes with ordinary rectangular sections.
+DO NOT use generic templates.
+DO NOT omit sections.
+DO NOT create fake non-functional buttons.
+
+The final result should feel like a real premium luxury beauty brand website that could be deployed commercially.
+
+==================================================
+1. TECHNOLOGY
+==================================================
+
+Build using a modern production-ready web stack.
+
+Preferred:
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion / Motion for animations
+- Lucide React or another clean SVG icon library
+- responsive CSS
+- component-based architecture
+
+Use clean reusable components.
+
+Structure the project properly:
+
+/components
+/components/ui
+/components/sections
+/components/navigation
+/components/booking
+/components/gallery
+/components/forms
+/lib
+/data
+/styles
+
+Keep the code maintainable and production-ready.
+
+==================================================
+2. BRAND
+==================================================
+
+Brand name:
+
+LUXE
+Nails
+
+Brand positioning:
+
+Luxury nail studio focused on:
+- nail extensions
+- nail art
+- personalized beauty
+- premium products
+- hygiene
+- expert nail artists
+- luxurious self-care
+
+Visual personality:
+
+- elegant
+- feminine
+- editorial
+- premium
+- sophisticated
+- warm
+- artistic
+- minimal but rich
+- high-end beauty editorial
+
+Avoid:
+- childish beauty salon aesthetics
+- excessive pink
+- generic spa templates
+- neon colors
+- overly rounded SaaS UI
+- cheap gradients
+- excessive shadows
+- cartoon illustrations
+
+==================================================
+3. VISUAL DESIGN SYSTEM
+==================================================
+
+The reference screenshots use a warm luxury palette.
+
+Primary background:
+warm ivory / cream
+
+Approximate colors:
+
+Background:
+#F4EDE3
+
+Secondary cream:
+#E9DED0
+
+Deep burgundy:
+#650C12
+
+Dark wine:
+#45070B
+
+Dark text:
+#241817
+
+Muted brown:
+#745D55
+
+Soft champagne:
+#D9C6B1
+
+White:
+#FFFDF8
+
+Use these as a starting point, but visually match the reference screenshots.
+
+The burgundy color should be used for:
+- major CTA buttons
+- dark feature sections
+- selected states
+- decorative elements
+- emphasis
+- some image cards
+
+The cream/ivory color should dominate the website.
+
+==================================================
+4. TYPOGRAPHY
+==================================================
+
+The typography is extremely important.
+
+Use an elegant high-contrast editorial serif for large headings.
+
+Recommended alternatives:
+- Cormorant Garamond
+- Playfair Display
+- DM Serif Display
+- or another sophisticated fashion/editorial serif
+
+Use an elegant script/calligraphy font for handwritten words such as:
+
+Nails
+Extensions
+Awaits
+Care
+Feeling
+You
+Story
+Luxury
+Beautiful
+etc.
+
+Recommended:
+- Allura
+- Brittany-style script
+- or another refined luxury script
+
+Use a clean modern sans-serif for:
+- navigation
+- body copy
+- labels
+- buttons
+- metadata
+- forms
+
+Recommended:
+- Inter
+- Manrope
+- DM Sans
+
+Typography hierarchy must closely resemble the screenshots.
+
+Large serif headings:
+very large, editorial and elegant.
+
+Script typography:
+large flowing handwritten accent overlapping serif headings.
+
+Small labels:
+uppercase
+wide letter spacing
+small font size.
+
+==================================================
+5. GLOBAL DESIGN LANGUAGE
+==================================================
+
+A defining feature of the reference design is the organic section geometry.
+
+Do NOT make every section a rectangle.
+
+Use:
+- irregular organic curves
+- asymmetric rounded shapes
+- large border-radius
+- flowing cream/burgundy shapes
+- image masks
+- blob-like section boundaries
+- curved image containers
+- overlapping layers
+- subtle thin decorative lines
+
+The design should feel like a luxury editorial magazine layout rather than a standard website.
+
+Use CSS border-radius, clip-path, pseudo-elements, SVG masks or carefully constructed containers where appropriate.
+
+Avoid excessive random blobs.
+
+The organic shapes should feel intentional and consistent.
+
+==================================================
+6. HEADER / NAVIGATION
+==================================================
+
+Create a sticky or semi-sticky header matching the screenshots.
+
+Desktop:
+
+Left:
+LUXE
+Nails
+
+Center:
+Home
+Services
+Gallery
+About
+Contact
+
+Right:
+Book Appointment button
+hamburger/menu icon
+
+Header background should blend into the ivory hero.
+
+Navigation should have subtle active-state underline.
+
+Book Appointment:
+burgundy pill button
+calendar icon
+white text
+arrow icon
+
+Hamburger icon should remain available.
+
+On mobile:
+- compact logo
+- hamburger
+- appointment CTA if space allows
+- slide-out navigation drawer
+
+Navigation must actually work.
+
+Clicking:
+Home → /
+Services → /services
+Gallery → /gallery
+About → /about
+Contact → /contact
+Book Appointment → /book
+
+==================================================
+7. HOME PAGE
+==================================================
+
+Create the homepage matching screenshot 1.
+
+Hero section:
+
+Left side:
+
+small label:
+MORE THAN A MANICURE
+
+Large heading:
+
+Nail
+Extensions
+
+Use serif + large script typography.
+
+Below:
+
+ART  ·  CARE  ·  CONFIDENCE
+
+Body:
+
+Premium nail extensions crafted with precision,
+designed to make you feel extraordinary.
+
+Primary CTA:
+Book Appointment →
+
+Trust/review element:
+
+4.9/5
+★★★★★
+Trusted by 10K+ Clients
+
+Include small circular client avatars.
+
+Right side:
+
+Large close-up luxury nail photography.
+
+Use an organic asymmetric image container.
+
+Overlay handwritten typography:
+
+Luxury
+in Every
+Detail
+
+Add circular "Watch Our Process" element around a play button.
+
+Add subtle decorative line artwork.
+
+Below hero create four service cards:
+
+1. Classic Extensions
+Timeless beauty
+Always in style
+
+2. Gel Extensions
+Strong. Natural.
+Flawless.
+
+3. Acrylic Extensions
+Bold designs
+Endless possibilities
+
+4. Custom Nail Art
+Your imagination
+Our art
+
+Each card:
+- nail image
+- organic rounded shape
+- title
+- subtitle
+- circular arrow button
+
+Cards should have subtle hover animation.
+
+==================================================
+8. HOME — ABOUT SECTION
+==================================================
+
+Create an organic two-column section.
+
+Left:
+large luxury nail salon interior image.
+
+Overlay:
+Step into a
+Nail Experience
+
+Right:
+
+small label:
+ABOUT US
+
+Heading:
+
+Where
+Art Meets Care
+
+Body copy:
+
+We are a premium nail studio dedicated to high-quality
+nail extensions, artistic designs, and a luxurious
+self-care experience. Every detail is crafted to make
+you feel confident, beautiful, and uniquely you.
+
+Feature icons:
+
+Premium
+Products
+
+Hygienic
+& Safe
+
+Expert
+Nail Artists
+
+Use elegant line icons.
+
+CTA:
+Our Story →
+
+==================================================
+9. HOME — BOOKING CTA
+==================================================
+
+Create a large deep burgundy organic section.
+
+Heading:
+
+Your Next
+Look Awaits
+
+Use serif + script.
+
+Description:
+
+Choose your service, pick a time,
+and let us take care of the rest.
+
+Right side:
+booking mini-form:
+
+Select Service
+Select Date & Time
+Book Appointment →
+
+This mini booking form must actually work.
+
+Clicking Book Appointment should take the user to /book.
+
+==================================================
+10. SERVICES PAGE
+==================================================
+
+Route:
+
+/services
+
+Match screenshot 2.
+
+Hero:
+
+OUR SERVICES
+
+More Than
+Nail Extensions
+
+Use serif + script.
+
+Description:
+
+Premium services, personalized care,
+and luxurious experiences — all in one place.
+
+Feature icons:
+Premium Products
+Hygienic & Safe
+Expert Nail Artists
+
+Right:
+large nail photography.
+
+Overlay script:
+Beautiful
+Nails
+Brighter
+Days
+
+Below:
+four category cards:
+
+Classic Extensions
+Gel Extensions
+Acrylic Extensions
+Custom Nail Art
+
+Then:
+
+OUR SERVICES
+
+Services Designed
+Around You
+
+Description.
+
+Create signature service cards.
+
+Cards:
+
+Classic Extensions
+Elegant and natural-looking extensions for everyday beauty.
+$70+
+60–90 min
+
+Gel Extensions
+Durable, lightweight, and long-lasting shine.
+$75+
+75–90 min
+
+Acrylic Extensions
+Bold, strong, and fully customizable to match your style.
+$65+
+60–90 min
+
+Custom Nail Art
+Unique designs crafted to express your personality.
+$15+
+15–60 min
+
+Every card must have:
+- image
+- service name
+- description
+- price
+- duration
+- Book Now button
+- favorite/heart icon where appropriate
+
+Book Now must select the service and move toward booking.
+
+Create filter tabs:
+
+All Services
+Extensions
+Nail Art
+Care
+Add-ons
+
+These tabs must actually filter the displayed services.
+
+==================================================
+11. ADDITIONAL SERVICES
+==================================================
+
+Create a horizontal section containing:
+
+Nail Repair
+$10+
+
+French Tips
+$15+
+
+Chrome Finish
+$20+
+
+Matte Finish
+$15+
+
+Nail Removal
+$20+
+
+Paraffin Treatment
+$25+
+
+Each should have a small line icon.
+
+==================================================
+12. GALLERY PAGE
+==================================================
+
+Route:
+
+/gallery
+
+Match screenshot 3.
+
+Hero:
+
+OUR GALLERY
+
+Nail Art
+Speaks Louder
+
+script accent:
+Speaks Louder
+
+Description:
+
+Explore our collection of real work, real clients,
+and endless inspiration. Every set tells a unique
+story of beauty, creativity, and confidence.
+
+Hero nail image on right.
+
+Create category filter pills:
+
+All
+Classic
+Gel
+Acrylic
+Nail Art
+Seasonal
+Bridal
+Celeb Looks
+
+These filters must work.
+
+Create a beautiful asymmetric masonry-style gallery.
+
+Categories/content:
+
+Classic Elegance
+Timeless French
+Custom Nail Art
+Soft Glam
+Bridal Special
+Acrylic Perfection
+Minimal Luxury
+Seasonal Inspo
+Trendy Looks
+Client Favourites
+
+Every image card:
+- organic border radius
+- hover zoom
+- overlay title
+- arrow icon
+
+Clicking an image should open a polished lightbox/modal.
+
+Lightbox:
+- large image
+- title
+- category
+- close button
+- previous/next navigation
+- keyboard support
+- escape to close
+
+==================================================
+13. GALLERY VIDEO SECTION
+==================================================
+
+Create burgundy organic section:
+
+VIDEO GALLERY
+
+Watch Our
+Nail Transformations
+
+Description:
+
+From simple to stunning —
+see the magic happen.
+
+Button:
+Watch Now →
+
+Include video thumbnail with play button.
+
+Click should open video modal.
+
+==================================================
+14. ABOUT PAGE
+==================================================
+
+Route:
+
+/about
+
+Match screenshot 4.
+
+Hero:
+
+ABOUT US
+
+More Than
+Nails,
+A Feeling
+
+Body:
+
+At Luxe Nails, we believe nail extensions are more than
+beauty — they're a form of self-expression, confidence,
+and care. Our mission is to make every visit a luxurious
+and personalized experience.
+
+Buttons:
+
+Book Appointment →
+
+Watch Our Story
+2 min
+
+Right:
+large nail image.
+
+Then three columns:
+
+Our Mission
+To enhance natural beauty through premium nail care
+and artistic excellence.
+
+Our Vision
+To be the most trusted and loved nail studio, known
+for luxury, creativity, and care.
+
+Our Promise
+Exceptional service, hygienic practices, and designs
+that make you feel you.
+
+==================================================
+15. ABOUT — STORY
+==================================================
+
+Create split section.
+
+Image:
+luxury salon interior.
+
+Heading:
+
+From Passion
+to a Destination
+
+Text:
+
+What started as a small dream turned into Luxe Nails —
+a premium nail studio built on passion, creativity,
+and a love for details.
+
+CTA:
+Our Journey →
+
+==================================================
+16. TEAM
+==================================================
+
+Create:
+
+MEET OUR TEAM
+
+The Artists
+Behind the Beauty
+
+Team members:
+
+Ava
+Senior Nail Artist
+
+Mia
+Nail Art Specialist
+
+Zara
+Extension Expert
+
+Use portrait images.
+
+Each card:
+- organic image
+- name
+- handwritten or elegant typography
+- role
+
+Hover:
+slight image zoom
+subtle overlay
+
+==================================================
+17. WHY CHOOSE US
+==================================================
+
+Heading:
+
+It's in the
+Details
+
+Features:
+
+Premium Products
+Only the best for your nails
+
+Hygienic & Safe
+Clean tools, safer beauty
+
+Personalized Experience
+Designs tailored to your style
+
+Expert Nail Artists
+Skilled, creative and passionate
+
+Use elegant line icons.
+
+==================================================
+18. STATS / TESTIMONIAL
+==================================================
+
+Deep burgundy section.
+
+Stats:
+
+10K+
+Happy Clients
+
+5+
+Years of Experience
+
+50+
+Unique Designs
+
+100%
+Client Satisfaction
+
+Testimonial card:
+
+"Luxe Nails is my go-to place! The team is so talented
+and the experience is always so luxurious. I leave feeling
+more confident every time."
+
+Customer:
+Priya S.
+
+5 star icons.
+
+==================================================
+19. CONTACT PAGE
+==================================================
+
+Route:
+
+/contact
+
+Match screenshot 5.
+
+Hero:
+
+GET IN TOUCH
+
+We'd Love
+to Hear From You
+
+script:
+You
+
+Description:
+
+Have a question, want to book an appointment,
+or simply want to say hello? We're here for you.
+
+Contact cards:
+
+Call Us
++1 (555) 123-4567
+
+Email Us
+hello@luxenails.com
+
+Visit Us
+123 Beauty Lane,
+New York, NY 10001
+
+Use icons.
+
+Right:
+large nail image.
+
+==================================================
+20. CONTACT FORM
+==================================================
+
+Section:
+
+SEND US A MESSAGE
+
+Let's
+Connect
+
+Form fields:
+
+Full Name
+Email Address
+Phone Number
+How can we help you?
+Your Message (Optional)
+
+Dropdown options:
+
+General Inquiry
+Appointment
+Service Question
+Pricing
+Other
+
+Submit:
+Send Message →
+
+FORM MUST WORK.
+
+Validation:
+- name required
+- valid email required
+- phone validation where applicable
+- inquiry type required
+
+Show:
+loading state
+success state
+error state
+
+Do not allow empty submission.
+
+==================================================
+21. LOCATION
+==================================================
+
+Create:
+
+OUR LOCATION
+
+Find Us Here
+
+123 Beauty Lane
+New York, NY 10001
+United States
+
+Button:
+Get Directions →
+
+Include a stylized map placeholder that visually matches the reference.
+
+If using Google Maps is not configured, make the map component gracefully display a styled map preview instead of breaking.
+
+==================================================
+22. BUSINESS HOURS
+==================================================
+
+Monday – Friday
+10:00 AM – 8:00 PM
+
+Saturday
+9:00 AM – 7:00 PM
+
+Sunday
+10:00 AM – 5:00 PM
+
+==================================================
+23. SOCIAL MEDIA
+==================================================
+
+Create:
+
+Follow Us
+
+Instagram
+Pinterest
+TikTok
+Facebook
+
+Use clean icons.
+
+Links should be configurable from one central configuration file.
+
+==================================================
+24. BOOKING PAGE
+==================================================
+
+Route:
+
+/book
+
+This is extremely important.
+
+Match screenshot 6.
+
+Hero:
+
+BOOK APPOINTMENT
+
+Your Next
+Look Awaits
+
+Description:
+
+Book your appointment and let our expert nail artists
+take care of the rest. Beautiful nails, a more confident you.
+
+Features:
+
+Premium Experience
+Hygienic & Safe
+Expert Nail Artists
+
+==================================================
+25. BOOKING WIZARD
+==================================================
+
+Build a fully functional multi-step appointment system.
+
+Steps:
+
+1. Service
+2. Date & Time
+3. Your Details
+4. Confirm
+
+Display progress indicator.
+
+STEP 1:
+
+Select a Service
+
+Categories:
+
+All Services
+Extensions
+Nail Art
+Care
+Add-ons
+
+Service cards:
+
+Classic Extensions
+$70+
+60–90 min
+
+Gel Extensions
+$75+
+75–90 min
+
+Acrylic Extensions
+$65+
+60–90 min
+
+Custom Nail Art
+$15+
+15–60 min
+
+Nail Repair
+$10+
+20–30 min
+
+French Tips
+$15+
+45–60 min
+
+Chrome Finish
+$20+
+45–60 min
+
+Matte Finish
+$15+
+45–60 min
+
+User must be able to select exactly one service.
+
+Selected state:
+- burgundy border
+- check indicator
+- subtle background change
+
+==================================================
+26. DATE & TIME
+==================================================
+
+Step 2:
+
+Select Date & Time
+
+Create a functional calendar.
+
+Allow:
+- month navigation
+- date selection
+- disable past dates
+- prevent invalid dates
+
+Time slots:
+
+Morning:
+9:00 AM
+10:00 AM
+11:00 AM
+
+Afternoon:
+12:00 PM
+1:00 PM
+2:00 PM
+3:00 PM
+4:00 PM
+
+Evening:
+5:00 PM
+6:00 PM
+7:00 PM
+
+Selected time:
+burgundy background
+white text
+
+Make time slots configurable.
+
+Do not allow booking without selecting a date and time.
+
+==================================================
+27. CUSTOMER DETAILS
+==================================================
+
+Step 3:
+
+Your Details
+
+Fields:
+
+Full Name
+Phone Number
+Email Address
+First Time or Returning Client?
+Special Requests (Optional)
+
+Dropdown:
+First Time Client
+Returning Client
+
+Validate all required fields.
+
+==================================================
+28. CONFIRMATION
+==================================================
+
+Step 4:
+
+Show booking summary:
+
+Service
+Price
+Duration
+Date
+Time
+Customer name
+Phone
+Email
+Location
+
+Button:
+
+Confirm Appointment →
+
+On submit:
+- show loading
+- show successful booking confirmation
+- generate a booking/reference number
+- display confirmation screen
+
+Example:
+
+BOOKING CONFIRMED
+
+Your appointment is booked.
+
+Booking ID:
+LN-XXXXXX
+
+Date
+Time
+Service
+
+Buttons:
+
+Add to Calendar
+Back to Home
+
+==================================================
+29. BOOKING DATA
+==================================================
+
+Structure booking logic cleanly.
+
+Create a service data object containing:
+
+id
+name
+category
+description
+price
+duration
+image
+available
+
+Create booking state:
+
+selectedService
+selectedDate
+selectedTime
+customerDetails
+bookingId
+
+Persist incomplete booking state locally so refresh doesn't destroy the user's selections.
+
+If backend/database functionality is supported, structure the app so booking records can easily be connected to Supabase or another database.
+
+Do NOT hardcode the UI logic into individual components.
+
+==================================================
+30. FORM / INTERACTION BEHAVIOR
+==================================================
+
+Every interactive element must actually work.
+
+Examples:
+
+Navigation links → correct pages
+Book Appointment → booking page
+Book Now → booking page with selected service
+Service filters → filter services
+Gallery filters → filter gallery
+Gallery image → lightbox
+Previous/next gallery → works
+Close modal → works
+Escape key → closes modal
+Video play → video modal
+Calendar → works
+Time selection → works
+Booking steps → work
+Back button → works
+Form validation → works
+Confirmation → works
+Mobile menu → works
+FAQ buttons if included → expand/collapse
+Social links → work
+Get Directions → external maps link
+Phone → tel:
+Email → mailto:
+
+No dead buttons.
+
+==================================================
+31. ANIMATION SYSTEM
+==================================================
+
+Use tasteful premium animations.
+
+DO NOT over-animate.
+
+Page load:
+- subtle fade-up
+- staggered content reveal
+
+Hero:
+- image slow scale/parallax
+- typography fade/slide
+- decorative line animation
+
+Cards:
+- image scale 1.03–1.06 on hover
+- subtle translateY
+- border/background transition
+
+Buttons:
+- subtle arrow movement
+- smooth background transition
+
+Navigation:
+- active underline animation
+
+Gallery:
+- image hover zoom
+- smooth filter transitions
+- lightbox fade/scale
+
+Booking:
+- step transition
+- selected card animation
+- calendar interaction
+
+Use Framer Motion / Motion.
+
+Animations should remain elegant and fast.
+
+Respect:
+
+prefers-reduced-motion
+
+When reduced motion is enabled, minimize animations.
+
+==================================================
+32. SCROLL ANIMATIONS
+==================================================
+
+As sections enter viewport:
+
+- opacity 0 → 1
+- translateY 20–30px → 0
+
+Use staggered animation for:
+- cards
+- feature icons
+- headings
+
+Do not make animations so slow that the site feels sluggish.
+
+==================================================
+33. IMAGE HANDLING
+==================================================
+
+The attached screenshots are visual references.
+
+Use high-quality nail photography and luxury salon imagery.
+
+The visual subject matter should include:
+- elegant nude nails
+- French tips
+- burgundy nails
+- chrome nails
+- custom nail art
+- luxury nail studio interiors
+- nail artist working
+- nail tools
+- nail polish
+- hands/nails closeups
+
+Maintain a consistent photography style:
+
+- warm luxury lighting
+- cream
+- burgundy
+- champagne
+- soft shadows
+- editorial beauty photography
+- premium commercial photography
+
+Avoid unrelated stock images.
+
+Use image optimization and lazy loading.
+
+Use proper alt text.
+
+==================================================
+34. RESPONSIVE DESIGN
+==================================================
+
+Desktop reference:
+approximately 1440px+.
+
+Tablet:
+768px–1199px.
+
+Mobile:
+320px–767px.
+
+DO NOT simply shrink the desktop layout.
+
+Recompose sections intelligently.
+
+Mobile:
+- stack columns
+- simplify navigation
+- convert grids into horizontal/vertical layouts
+- preserve organic shapes
+- keep typography readable
+- keep CTAs accessible
+- preserve the premium aesthetic
+
+Booking interface must be especially usable on mobile.
+
+Gallery should become a responsive 2-column or 1-column layout depending on screen width.
+
+==================================================
+35. ACCESSIBILITY
+==================================================
+
+Implement:
+
+semantic HTML
+ARIA labels where needed
+keyboard navigation
+visible focus states
+proper form labels
+accessible modals
+Escape key support
+sufficient contrast
+alt text
+reduced motion support
+
+Do not sacrifice accessibility for visual design.
+
+==================================================
+36. SEO
+==================================================
+
+Add proper SEO.
+
+Homepage title:
+
+Luxe Nails | Premium Nail Extensions & Nail Art
+
+Description:
+
+Luxury nail extensions, custom nail art, and premium
+self-care experiences crafted by expert nail artists.
+
+Create page-specific metadata.
+
+Use:
+- semantic headings
+- Open Graph metadata
+- favicon
+- canonical URLs
+- proper image alt text
+
+Add LocalBusiness / NailSalon structured data where appropriate.
+
+==================================================
+37. PERFORMANCE
+==================================================
+
+Optimize for production.
+
+Requirements:
+
+- optimized images
+- lazy loading
+- code splitting
+- minimal unnecessary JavaScript
+- avoid layout shift
+- responsive images
+- reusable components
+- clean CSS
+- no unnecessary dependencies
+
+Target excellent Lighthouse scores.
+
+==================================================
+38. FOOTER
+==================================================
+
+Create an elegant luxury footer.
+
+Include:
+
+LUXE
+Nails
+
+Premium nail extensions,
+artistic designs,
+and luxurious self-care.
+
+Navigation:
+Home
+Services
+Gallery
+About
+Contact
+Book Appointment
+
+Contact:
++1 (555) 123-4567
+hello@luxenails.com
+123 Beauty Lane
+New York, NY 10001
+
+Social icons.
+
+Copyright:
+
+© 2026 Luxe Nails. All rights reserved.
+
+==================================================
+39. DESIGN DETAILS THAT MUST NOT BE MISSED
+==================================================
+
+Pay special attention to:
+
+1. Editorial serif typography
+2. Script typography
+3. Burgundy + ivory color palette
+4. Organic asymmetric image masks
+5. Irregular section boundaries
+6. Large luxury photography
+7. Thin decorative lines
+8. Circular icon buttons
+9. Small uppercase letter-spaced labels
+10. Elegant iconography
+11. Overlapping content
+12. Premium whitespace
+13. Soft rounded cards
+14. Burgundy CTA sections
+15. Image + typography combinations
+16. Editorial magazine-like composition
+17. Subtle animation
+18. Luxury beauty photography
+19. Consistent border radius language
+20. Visual consistency across ALL pages
+
+==================================================
+40. CONTENT CONSISTENCY
+==================================================
+
+All pages must feel like one website.
+
+Do not independently redesign each page.
+
+Use a single design system.
+
+The following must remain consistent:
+
+- header
+- navigation
+- colors
+- typography
+- buttons
+- icons
+- organic shapes
+- image treatment
+- cards
+- spacing
+- animation
+- footer
+
+==================================================
+41. NO PLACEHOLDER UI
+==================================================
+
+Do not create:
+
+"Lorem ipsum"
+
+"Coming soon"
+
+"TODO"
+
+"Button"
+
+"Sample text"
+
+"Placeholder"
+
+fake broken images
+
+dead links
+
+non-functional interactions
+
+Every visible feature should either work or be intentionally represented as a realistic component.
+
+==================================================
+42. CODE QUALITY
+==================================================
+
+Create reusable components such as:
+
+Header
+MobileMenu
+Button
+SectionLabel
+OrganicImage
+ServiceCard
+ServiceFilter
+GalleryCard
+GalleryFilter
+Lightbox
+VideoModal
+FeatureItem
+Testimonial
+TeamCard
+BookingProgress
+ServiceSelector
+DatePicker
+TimeSlotSelector
+CustomerDetails
+BookingSummary
+ContactForm
+Footer
+
+Centralize data wherever possible.
+
+For example:
+
+services.ts
+gallery.ts
+team.ts
+siteConfig.ts
+
+Do not duplicate the same service data across pages.
+
+==================================================
+43. FINAL QA
+==================================================
+
+Before considering the website complete, test:
+
+Desktop:
+1440px
+1280px
+1024px
+
+Tablet:
+768px
+
+Mobile:
+390px
+375px
+320px
+
+Test:
+
+- navigation
+- mobile menu
+- every button
+- every link
+- service filters
+- gallery filters
+- gallery lightbox
+- video modal
+- booking flow
+- form validation
+- date selection
+- time selection
+- booking confirmation
+- back navigation
+- refresh behavior
+- responsive layout
+- keyboard navigation
+- Escape key
+- reduced motion
+
+Fix all visible layout issues.
+
+==================================================
+44. IMPORTANT VISUAL INSTRUCTION
+==================================================
+
+The six uploaded screenshots are NOT merely inspiration.
+
+Use them as the visual specification.
+
+Analyze their:
+- spacing
+- proportions
+- composition
+- typography
+- image positioning
+- organic curves
+- section heights
+- card shapes
+- button shapes
+- visual hierarchy
+
+Recreate the same design language as accurately as possible while implementing it as a real responsive website.
+
+The result should look like the same website represented in the reference screenshots, not a different website inspired by them.
+
+==================================================
+45. FINAL OUTPUT
+==================================================
+
+Generate the complete working website.
+
+It must be:
+
+- fully responsive
+- interactive
+- animated
+- accessible
+- SEO-ready
+- production-ready
+- deployable
+- componentized
+- cleanly coded
+
+No explanation-only output.
+
+Actually build the website.
+
+After implementation, inspect the entire site and fix:
+- visual inconsistencies
+- broken interactions
+- overflow
+- spacing issues
+- mobile issues
+- typography issues
+- missing sections
+- non-functional buttons
+- console errors
+- form errors
+
+The final result should be a polished luxury nail salon website matching the six supplied reference screenshots as closely as possible.

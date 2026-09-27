@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Tipntoe">
+  <rect width="32" height="32" rx="8" fill="#6B1520"/>
+  <path fill="#D9C6B1" d="M16 4.8c3.5 0 6.1 4.3 6.1 9.8 0 6.3-2.7 11.6-6.1 12.4-3.4-.8-6.1-6.1-6.1-12.4 0-5.5 2.6-9.8 6.1-9.8z"/>
+  <path fill="#F6F1EA" d="M16 4.8c3.5 0 6.1 2.5 6.1 5.4H9.9C9.9 7.3 12.5 4.8 16 4.8z"/>
+</svg>
