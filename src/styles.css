@@ -21,6 +21,8 @@
     scroll-behavior: smooth;
     color-scheme: light;
     scrollbar-width: none;
+    /* Guard against sub-pixel overflow from decorative spinning badges. */
+    overflow-x: clip;
   }
 
   html::-webkit-scrollbar,
@@ -640,6 +642,19 @@
     background: color-mix(in srgb, white 62%, var(--color-ivory));
     border: 1px solid color-mix(in srgb, var(--color-champagne) 70%, white);
     border-radius: 1.5rem;
+  }
+
+  /* Scroll-reveal: applied progressively by JS, so no-JS content stays visible. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    will-change: opacity, transform;
+  }
+
+  .reveal.in {
+    opacity: 1;
+    transform: none;
   }
 
   .lift {

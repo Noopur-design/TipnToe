@@ -3,6 +3,19 @@ import type { ReactNode } from "react";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { PageShell } from "@/components/layout";
+// Self-hosted fonts (no external CDN dependency, no render-blocking, no FOUT).
+import "@fontsource/manrope/400.css";
+import "@fontsource/manrope/500.css";
+import "@fontsource/manrope/600.css";
+import "@fontsource/manrope/700.css";
+import "@fontsource/playfair-display/500.css";
+import "@fontsource/playfair-display/600.css";
+import "@fontsource/playfair-display/700.css";
+import "@fontsource/playfair-display/500-italic.css";
+import "@fontsource/playfair-display/600-italic.css";
+import "@fontsource/eb-garamond/500-italic.css";
+import "@fontsource/eb-garamond/600-italic.css";
+import "@fontsource/allura/400.css";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -20,12 +33,6 @@ export const Route = createRootRoute({
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "stylesheet", href: appCss },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Allura&family=EB+Garamond:ital,wght@1,500;1,600&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap",
-      },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
     ],

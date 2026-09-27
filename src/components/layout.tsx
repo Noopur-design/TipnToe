@@ -160,7 +160,48 @@ export function Footer() {
   );
 }
 
+function useScrollReveal(pathname: string) {
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || !("IntersectionObserver" in window)) return;
+    // Wait a frame so the fresh route has painted before we measure/observe.
+    const raf = window.requestAnimationFrame(() => {
+      const nodes = Array.from(document.querySelectorAll<HTMLElement>("#main .section"));
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in");
+              io.unobserve(entry.target);
+            }
+          }
+        },
+        { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
+      );
+      const fold = window.innerHeight * 0.9;
+      for (const node of nodes) {
+        // Never hide content already on screen — avoids any first-paint flash.
+        if (node.getBoundingClientRect().top < fold) {
+          node.classList.add("reveal", "in");
+        } else {
+          node.classList.add("reveal");
+          io.observe(node);
+        }
+      }
+      revealCleanup = () => io.disconnect();
+    });
+    let revealCleanup: (() => void) | undefined;
+    return () => {
+      window.cancelAnimationFrame(raf);
+      revealCleanup?.();
+    };
+  }, [pathname]);
+}
+
 export function PageShell({ children }: { children: ReactNode }) {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  useScrollReveal(pathname);
   return (
     <>
       <ShapeDefs />
