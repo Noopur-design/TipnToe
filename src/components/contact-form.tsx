@@ -1,5 +1,5 @@
 import { Mail, Phone, User } from "lucide-react";
-import { useState, type FormEvent, type ReactNode } from "react";
+import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from "react";
 import { inquiryTypes } from "@/data/site";
 
 type Errors = Partial<Record<"name" | "email" | "phone" | "topic", string>>;
@@ -71,19 +71,7 @@ export function ContactForm() {
       <Field id="contact-name" label="Full Name" icon={<User size={16} />} value={name} error={errors.name} onChange={setName} autoComplete="name" />
       <Field id="contact-email" label="Email Address" icon={<Mail size={16} />} value={email} error={errors.email} onChange={setEmail} autoComplete="email" inputMode="email" />
       <Field id="contact-phone" label="Phone Number" icon={<Phone size={16} />} value={phone} error={errors.phone} onChange={setPhone} autoComplete="tel" inputMode="tel" />
-      <label className="field-wrap block">
-        <span className="sr-only">How can we help you?</span>
-        <Mail size={16} className="field-icon" aria-hidden />
-        <select className={`field field-select${errors.topic ? " invalid" : ""}`} value={topic} onChange={(event) => setTopic(event.target.value)} aria-invalid={errors.topic ? true : undefined}>
-          <option value="">How can we help you?</option>
-          {inquiryTypes.map((item) => (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          ))}
-        </select>
-        {errors.topic ? <p className="field-error">{errors.topic}</p> : null}
-      </label>
+      <TopicSelect value={topic} error={errors.topic} onChange={setTopic} />
       <label className="field-wrap area block">
         <span className="sr-only">Your message</span>
         <textarea className="field" placeholder="Your Message (Optional)" value={message} maxLength={800} onChange={(event) => setMessage(event.target.value)} />
@@ -94,6 +82,85 @@ export function ContactForm() {
         {status === "loading" ? null : <span className="arrow" aria-hidden>→</span>}
       </button>
     </form>
+  );
+}
+
+function TopicSelect({ value, error, onChange }: { value: string; error?: string; onChange: (value: string) => void }) {
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) setOpen(false);
+    };
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  function choose(item: string) {
+    onChange(item);
+    setOpen(false);
+  }
+
+  function onKeyDown(event: ReactKeyboardEvent) {
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      if (!open) {
+        setOpen(true);
+        return;
+      }
+      setActive((current) => {
+        const delta = event.key === "ArrowDown" ? 1 : -1;
+        return (current + delta + inquiryTypes.length) % inquiryTypes.length;
+      });
+    } else if (open && (event.key === "Enter" || event.key === " ")) {
+      event.preventDefault();
+      choose(inquiryTypes[active]!);
+    }
+  }
+
+  return (
+    <div className={`client-field${open ? " open" : ""}`} ref={ref}>
+      <button
+        type="button"
+        className={`field field-select${error ? " invalid" : ""}`}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-invalid={error ? true : undefined}
+        onClick={() => setOpen((current) => !current)}
+        onKeyDown={onKeyDown}
+      >
+        <Mail size={16} aria-hidden />
+        <span className={value ? "" : "is-placeholder"}>{value || "How can we help you?"}</span>
+      </button>
+      {open ? (
+        <ul className="client-menu tall" role="listbox" aria-label="How can we help you?">
+          {inquiryTypes.map((item, index) => (
+            <li key={item}>
+              <button
+                type="button"
+                role="option"
+                aria-selected={value === item || (!value && index === active)}
+                onMouseEnter={() => setActive(index)}
+                onClick={() => choose(item)}
+              >
+                {item}
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      {error ? <p className="field-error">{error}</p> : null}
+    </div>
   );
 }
 

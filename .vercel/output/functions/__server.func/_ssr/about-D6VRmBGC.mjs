@@ -1,8 +1,8 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { X as require_react, w as require_jsx_runtime, x as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { S as ChevronLeft, _ as Flower2, g as Gem, h as Heart, o as Shield, x as ChevronRight } from "../_libs/lucide-react.mjs";
-import { i as Photo, o as RingBadge, r as PageCta, s as Stars, t as ArrowButton } from "./ui-DMRWTPDc.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/about-QlYzEhBF.js
+import { i as Photo, o as RingBadge, r as PageCta, s as Stars, t as ArrowButton } from "./ui-CfSGqP4J.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/about-D6VRmBGC.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var team = [

@@ -4,7 +4,7 @@ import { E as ArrowRight, d as Menu, m as Instagram, r as TriangleAlert, t as X,
 import { a as union, i as string, n as number, r as object, t as literal } from "../_libs/zod.mjs";
 import { t as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-k1z4irU2.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-avF-vMbE.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var import_react_dom = require_react_dom();
@@ -835,7 +835,7 @@ function RootShell({ children }) {
 		] })]
 	});
 }
-var $$splitComponentImporter$6 = () => import("./routes-DRjuNeyZ.mjs");
+var $$splitComponentImporter$6 = () => import("./routes--mmA0YDl.mjs");
 var Route$6 = createFileRoute("/")({
 	head: () => ({
 		meta: [{ title: "tipntoe | Nail Extensions & Nail Art in Mumbai" }, {
@@ -850,7 +850,7 @@ var Route$6 = createFileRoute("/")({
 	}),
 	component: lazyRouteComponent($$splitComponentImporter$6, "component")
 });
-var $$splitComponentImporter$5 = () => import("./about-QlYzEhBF.mjs");
+var $$splitComponentImporter$5 = () => import("./about-D6VRmBGC.mjs");
 var Route$5 = createFileRoute("/about")({
 	head: () => ({ meta: [{ title: "About | tipntoe" }, {
 		name: "description",
@@ -858,7 +858,7 @@ var Route$5 = createFileRoute("/about")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-var $$splitComponentImporter$4 = () => import("./book-BL_9JCW6.mjs");
+var $$splitComponentImporter$4 = () => import("./book-Cc4vL0Y9.mjs");
 var Route$4 = createFileRoute("/book")({
 	validateSearch: (search) => ({
 		service: typeof search.service === "string" ? search.service : void 0,
@@ -871,7 +871,7 @@ var Route$4 = createFileRoute("/book")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-var $$splitComponentImporter$3 = () => import("./contact-C8FNhO39.mjs");
+var $$splitComponentImporter$3 = () => import("./contact-9tRIKNOk.mjs");
 var Route$3 = createFileRoute("/contact")({
 	head: () => ({ meta: [{ title: "Contact | tipntoe" }, {
 		name: "description",
@@ -879,7 +879,7 @@ var Route$3 = createFileRoute("/contact")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-var $$splitComponentImporter$2 = () => import("./gallery-DHmqV5jT.mjs");
+var $$splitComponentImporter$2 = () => import("./gallery-H7QNUbZl.mjs");
 var Route$2 = createFileRoute("/gallery")({
 	head: () => ({ meta: [{ title: "Gallery | tipntoe" }, {
 		name: "description",
@@ -887,7 +887,7 @@ var Route$2 = createFileRoute("/gallery")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-var $$splitComponentImporter$1 = () => import("./journey-CuFtpmBr.mjs");
+var $$splitComponentImporter$1 = () => import("./journey-BOVQFa0z.mjs");
 var Route$1 = createFileRoute("/journey")({
 	head: () => ({ meta: [{ title: "Our Journey | tipntoe" }, {
 		name: "description",
@@ -895,7 +895,7 @@ var Route$1 = createFileRoute("/journey")({
 	}] }),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("./services-COwNDIJX.mjs");
+var $$splitComponentImporter = () => import("./services-DIVzQTGi.mjs");
 var Route = createFileRoute("/services")({
 	head: () => ({ meta: [{ title: "Services | tipntoe" }, {
 		name: "description",

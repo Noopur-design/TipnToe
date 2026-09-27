@@ -1,9 +1,9 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { X as require_react, w as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { b as Clock, f as MapPin, l as Phone, n as User, p as Mail, s as Plus, w as Calendar } from "../_libs/lucide-react.mjs";
-import { a as SocialIcon, c as site, s as inquiryTypes } from "./router-k1z4irU2.mjs";
-import { i as Photo, r as PageCta, t as ArrowButton } from "./ui-DMRWTPDc.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/contact-C8FNhO39.js
+import { a as SocialIcon, c as site, s as inquiryTypes } from "./router-avF-vMbE.mjs";
+import { i as Photo, r as PageCta, t as ArrowButton } from "./ui-CfSGqP4J.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/contact-9tRIKNOk.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var faqs = [
@@ -135,36 +135,10 @@ function ContactForm() {
 				autoComplete: "tel",
 				inputMode: "tel"
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
-				className: "field-wrap block",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-						className: "sr-only",
-						children: "How can we help you?"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, {
-						size: 16,
-						className: "field-icon",
-						"aria-hidden": true
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("select", {
-						className: `field field-select${errors.topic ? " invalid" : ""}`,
-						value: topic,
-						onChange: (event) => setTopic(event.target.value),
-						"aria-invalid": errors.topic ? true : void 0,
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
-							value: "",
-							children: "How can we help you?"
-						}), inquiryTypes.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
-							value: item,
-							children: item
-						}, item))]
-					}),
-					errors.topic ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "field-error",
-						children: errors.topic
-					}) : null
-				]
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TopicSelect, {
+				value: topic,
+				error: errors.topic,
+				onChange: setTopic
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
 				className: "field-wrap area block",
@@ -193,6 +167,84 @@ function ContactForm() {
 					children: "→"
 				})]
 			})
+		]
+	});
+}
+function TopicSelect({ value, error, onChange }) {
+	const [open, setOpen] = (0, import_react.useState)(false);
+	const [active, setActive] = (0, import_react.useState)(0);
+	const ref = (0, import_react.useRef)(null);
+	(0, import_react.useEffect)(() => {
+		if (!open) return;
+		const onDown = (event) => {
+			if (ref.current && !ref.current.contains(event.target)) setOpen(false);
+		};
+		const onKey = (event) => {
+			if (event.key === "Escape") setOpen(false);
+		};
+		document.addEventListener("mousedown", onDown);
+		document.addEventListener("keydown", onKey);
+		return () => {
+			document.removeEventListener("mousedown", onDown);
+			document.removeEventListener("keydown", onKey);
+		};
+	}, [open]);
+	function choose(item) {
+		onChange(item);
+		setOpen(false);
+	}
+	function onKeyDown(event) {
+		if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+			event.preventDefault();
+			if (!open) {
+				setOpen(true);
+				return;
+			}
+			setActive((current) => {
+				return (current + (event.key === "ArrowDown" ? 1 : -1) + inquiryTypes.length) % inquiryTypes.length;
+			});
+		} else if (open && (event.key === "Enter" || event.key === " ")) {
+			event.preventDefault();
+			choose(inquiryTypes[active]);
+		}
+	}
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: `client-field${open ? " open" : ""}`,
+		ref,
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+				type: "button",
+				className: `field field-select${error ? " invalid" : ""}`,
+				"aria-haspopup": "listbox",
+				"aria-expanded": open,
+				"aria-invalid": error ? true : void 0,
+				onClick: () => setOpen((current) => !current),
+				onKeyDown,
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, {
+					size: 16,
+					"aria-hidden": true
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: value ? "" : "is-placeholder",
+					children: value || "How can we help you?"
+				})]
+			}),
+			open ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+				className: "client-menu tall",
+				role: "listbox",
+				"aria-label": "How can we help you?",
+				children: inquiryTypes.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+					type: "button",
+					role: "option",
+					"aria-selected": value === item || !value && index === active,
+					onMouseEnter: () => setActive(index),
+					onClick: () => choose(item),
+					children: item
+				}) }, item))
+			}) : null,
+			error ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "field-error",
+				children: error
+			}) : null
 		]
 	});
 }
